@@ -6,7 +6,7 @@ shinyUI(fluidPage(
   # Application title.
   
   
-  titlePanel("ECOFORCE: demostration of how climate shapes the distribution of a certain species in Canada"),
+  titlePanel("ECOFORCE: how climate shapes the distribution of tree species in Canada (Demo)"),
   
   
   sidebarPanel(
@@ -23,7 +23,7 @@ shinyUI(fluidPage(
     # numericInput for selection of the number of observation that user wants to view
     selectInput("species", "Species:", 
                 #choices = names(species_list) ),
-                choices = c("BF", "BS", "WS")),
+                choices = c("Balsam_Fir", "Black_Spruce", "White_Spruce")),
     
     #### add image 
     imageOutput("myImage",  height=100, width = 100),
@@ -33,18 +33,20 @@ shinyUI(fluidPage(
     br(),
     
     
-    # select input year
-    sliderInput("year", "Observation year:", 1951,2005, 1951),
-    
-    p("some explication here"),
-    br(),
     
     
     
     # select transparency
-    sliderInput("transparency", "Transparency", 0, 1, 0),
+    sliderInput("transparency", "Transparency", 0,1,0),
     
-    p("Choose the transparency of the distribution image"),
+    p("Choose the transparency of the distribution image."),
+    br(),
+    
+    
+    # select input year
+    sliderInput("year", "Observation year:", 2000,2100, 2000, step = 25),
+    
+    p("Slide towards the future to see how tree distribution will change along with a warming climate!"),
     br()
     
     

@@ -5,8 +5,9 @@ account: ecoforce
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1021027
-bundleId: 2217089
+bundleId: 2219642
 url: https://ecoforce.shinyapps.io/METEOHACK2019_ECOFORCE/
-when: 1562732356.97522
+when: 1562789164.348
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: projet.pptx|test.R
