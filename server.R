@@ -31,8 +31,8 @@ shinyServer(function(input, output) {
     
     # Return a list containing the filename and alt text
     list(src = filename,
-         width = 80,
-         height = 80,
+         width = 120,
+         height = 120,
          alt = paste("Image number", input$species))
     
   }, deleteFile = FALSE)
