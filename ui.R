@@ -13,18 +13,25 @@ shinyUI(fluidPage(
     
 
     
-    # selectInput widget for the selection of dataset
-    selectInput("climat", "Climat factors:", 
-                choices = c("PCP30", "TMAX30", "TMIN30", "TMEAN30")),
+    # # selectInput widget for the selection of dataset
+    # selectInput("climat", "Climat factors:", 
+    #             #choices = names(climat_list)),
+    #             choices = c("PCP30", "TMEAN30")),
 
     
     
     # numericInput for selection of the number of observation that user wants to view
     selectInput("species", "Species:", 
-                choices = c("BF", "BS")),
+                #choices = names(species_list) ),
+                choices = c("BF", "BS", "WS")),
     
     #### add image 
     imageOutput("myImage",  height=100, width = 100),
+    br(),
+    br(),
+    br(),
+    br(),
+    
     
     # select input year
     sliderInput("year", "Observation year:", 1951,2005, 1951),
@@ -54,8 +61,12 @@ shinyUI(fluidPage(
     # display the structure of the selected dataset
     verbatimTextOutput("structure"),
     
-    # plot
+    # plot of distribution and altitude
     plotOutput("plot"),
+    
+    
+    #plot of climate factors
+    plotOutput("plot1"),
     
     # just a header for the heading
     h4(textOutput("observation")),
