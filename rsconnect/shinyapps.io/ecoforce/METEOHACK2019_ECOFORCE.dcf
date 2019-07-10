@@ -1,0 +1,12 @@
+name: METEOHACK2019_ECOFORCE
+title: METEOHACK2019_ECOFORCE
+username:
+account: ecoforce
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1021027
+bundleId: 2217089
+url: https://ecoforce.shinyapps.io/METEOHACK2019_ECOFORCE/
+when: 1562732356.97522
+asMultiple: FALSE
+asStatic: FALSE

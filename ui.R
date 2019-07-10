@@ -6,7 +6,7 @@ shinyUI(fluidPage(
   # Application title.
   
   
-  titlePanel("ECOFORCE: demonstrate how climate shapes the distribution of species"),
+  titlePanel("ECOFORCE: demostration of how climate shapes the distribution of a certain species in Canada"),
   
   
   sidebarPanel(
@@ -14,13 +14,13 @@ shinyUI(fluidPage(
 
     
     # selectInput widget for the selection of dataset
-    selectInput("climat", "climat Variable:", 
+    selectInput("climat", "Climat factors:", 
                 choices = c("PCP30", "TMAX30", "TMIN30", "TMEAN30")),
 
     
     
     # numericInput for selection of the number of observation that user wants to view
-    selectInput("species", "species:", 
+    selectInput("species", "Species:", 
                 choices = c("BF", "BS")),
     
     
@@ -34,9 +34,9 @@ shinyUI(fluidPage(
     
     
     # select transparency
-    sliderInput("transparency", "climat   v.s.    species:", 0, 1, 0),
+    sliderInput("transparency", "Transparency", 0, 1, 0),
     
-    p("some explication here"),
+    p("Choose the transparency of the distribution image"),
     br()
     
     

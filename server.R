@@ -40,12 +40,12 @@ shinyServer(function(input, output) {
 
     #windowsFonts(A=windowsFont("Times New Roman")) 
     
-    plot(img_year, col=brewer.pal(n = 8, name = "Blues"), axes=FALSE, legend.shrink=1, 
-         horizontal = TRUE, legend.args = list(text= input$climat))
+    plot(img_year, col=brewer.pal(n = 8, name = "Blues"), axes=FALSE, legend.shrink=1, box = FALSE,
+         horizontal = FALSE, legend.args = list(text= input$climat, side = 2))
     
     
-    plot(img_species, axes=FALSE, legend.shrink=1, 
-         horizontal = TRUE, legend.args = list(text= input$species ), 
+    plot(img_species, axes=FALSE, legend.shrink=1, box = FALSE,
+         horizontal = TRUE, legend.args = list(text= input$species, side = 3 ), 
          alpha=trans, add = TRUE)
   })
   
