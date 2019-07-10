@@ -23,7 +23,8 @@ shinyUI(fluidPage(
     selectInput("species", "Species:", 
                 choices = c("BF", "BS")),
     
-    
+    #### add image 
+    imageOutput("myImage",  height=100, width = 100),
     
     # select input year
     sliderInput("year", "Observation year:", 1951,2005, 1951),

@@ -23,6 +23,22 @@ shinyServer(function(input, output) {
     
   })
   
+  
+  # image in the sidePanel
+  output$myImage <- renderImage({
+    # When input$n is 3, filename is ./images/image3.jpeg
+    filename <- paste(input$species, ".jpg", sep = "")
+    
+    # Return a list containing the filename and alt text
+    list(src = filename,
+         width = 80,
+         height = 80,
+         alt = paste("Image number", input$species))
+    
+  }, deleteFile = FALSE)
+  
+  
+  
   # Plot in the mainPanel 
   output$plot <- renderPlot({
     
